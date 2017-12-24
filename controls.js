@@ -3,7 +3,7 @@ var mic = require('mic');
 var fs = require('fs');
 var time = require('date-and-time');
 
-var deepspeech = require('./node_modules/deepspeech/lib/binding/v0.1.0/linux-x64/node-v48/deepspeech.node');
+var deepspeech = require('deepspeech');
 
 
 var micInstance = mic({
