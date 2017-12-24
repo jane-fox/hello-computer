@@ -1,0 +1,32 @@
+{
+  "name": "hello-computer",
+  "version": "1.0.0",
+  "description": "Use deepspeech to talk to your computer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jane-fox/hello-computer.git"
+  },
+  "author": "Jane Fox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jane-fox/hello-computer/issues"
+  },
+  "homepage": "https://github.com/jane-fox/hello-computer#readme",
+  "dependencies": {
+    "cleverbot.io": "^1.0.4",
+    "date-and-time": "^0.6.1",
+    "deepspeech": "^0.1.0",
+    "fs": "0.0.1-security",
+    "google-tts-api": "0.0.2",
+    "jquery": "^3.2.1",
+    "mic": "^2.1.2",
+    "node-speak": "0.0.2"
+  },
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}
