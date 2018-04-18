@@ -14,33 +14,39 @@ var micInstance = mic({
 });
 
 var micInputStream = micInstance.getAudioStream();
+var outputFileStream = null;
 
-var current_time = null;
+var filename = "";
 
 
 function setup_mic() {
 
+    //console.log("Setting up microphone...")
+    micInstance.start();
+
     // Get string of current date time
     var date = new Date();
-    current_time = time.format(date, 'YYYY-MM-DD HH:mm:ss');
+    var current_time = time.format(date, 'DD HH:mm:ss');
+    filename = './output/' + current_time + '.raw';
 
     // Open output file as wav
-    var outputFileStream = fs.WriteStream( './output/' + current_time + '.wav');
+    outputFileStream = fs.WriteStream( filename );
     //var outputFileStream = fs.WriteStream('test.wav');
      
     // Directs mic to be saved into our new file
-    micInputStream.pipe(outputFileStream);
+    //micInputStream.pipe(outputFileStream);
+
+
       
 }
 
 function save_file() {
-
+    //outputFileStream.end();
 }
 
 
 function start() {
 
-    micInstance.start();
 
     setup_mic();
     
@@ -60,7 +66,23 @@ function finish() {
 
     save_file();
     micInstance.stop();
+
+
     
+    /*
+    deepspeech.Model({
+        model: "models/output_graph.pb", 
+        alphabet: "models/alphabet.txt", 
+        lm: "models/lm.binary", 
+        trie: "models/trie", 
+        audio: filename
+    });
+    */
+
+    console.log(deepspeech);
+    deepspeech.audioToInputVector("models/output_graph.pb", "output/test.wav", "models/alphabet.txt", "models/lm.binary", "models/trie");
+    
+
 }
 
 

@@ -17,16 +17,18 @@
   },
   "homepage": "https://github.com/jane-fox/hello-computer#readme",
   "dependencies": {
+    "cleverbot-api": "^1.0.3",
     "cleverbot.io": "^1.0.4",
-    "date-and-time": "^0.6.1",
-    "deepspeech": "^0.1.0",
+    "date-and-time": "^0.6.2",
+    "deepspeech": "^0.1.1",
     "fs": "0.0.1-security",
     "google-tts-api": "0.0.2",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
     "mic": "^2.1.2",
-    "node-speak": "0.0.2"
+    "node-speak": "0.0.2",
+    "node-wav": "0.0.2"
   },
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "^1.8.4"
   }
 }
