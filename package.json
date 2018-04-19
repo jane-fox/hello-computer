@@ -24,9 +24,13 @@
     "fs": "0.0.1-security",
     "google-tts-api": "0.0.2",
     "jquery": "^3.3.1",
+    "memory-stream": "0.0.3",
     "mic": "^2.1.2",
     "node-speak": "0.0.2",
-    "node-wav": "0.0.2"
+    "node-wav": "0.0.2",
+    "react-mic": "^9.1.2",
+    "sox": "^0.1.0",
+    "sox-stream": "^2.0.1"
   },
   "devDependencies": {
     "electron": "^1.8.4"
